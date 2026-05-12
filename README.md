@@ -1,76 +1,58 @@
-# Tripadvisor ML project (03.2026)
-פרויקט אמצע בקורס בר אילן 
+# Restaurant Success Prediction Framework
 
-Tripadvisor Data Analysis Project
-📌 Overview
-{Will be added later}
+This project presents a machine learning framework for predicting high-potential restaurant investments in European markets using TripAdvisor data.
 
-👥 Team Members
-Hilla
-Erez
-Eitan
+## Project Objective
 
-📁 Project Structure
-project/
-│
-├── data/
-│   ├── raw/          # Original dataset
-│   └── processed/    # Cleaned data
-│
-├── notebooks/        # Jupyter notebooks
-├── src/              # Python scripts (אולי לא נצטרך)
-├── outputs/          # Figures, results
-│
-├── requirements.txt
-└── README.md
+The goal was to build a decision-support system for a risk-averse investment scenario, where the cost of investing in a failed business (False Positive) is significantly higher than missing a successful opportunity (False Negative).
 
-⚙️ Setup Instructions
-Clone the repository:
+Therefore, the model was optimized for **high precision**, targeting approximately **80% confidence** in selected investment candidates.
 
-git clone <repo-url>
-cd <repo-name>
+## Dataset
 
-Create virtual environment:
+The project uses the TripAdvisor European Restaurants dataset available on Kaggle:
 
-python -m venv venv
-venv\Scripts\activate
+TripAdvisor European Restaurants Dataset (Kaggle) -> Link: https://www.kaggle.com/datasets/stefanoleone992/tripadvisor-european-restaurants
 
-Install dependencies:
-pip install -r requirements.txt
+Due to the dataset size, it is not included directly in this repository.  
+To run the notebook locally:
 
-▶️ How to Run
-Open notebooks using Jupyter:
-jupyter notebook
-Or use VS Code with the Python/Jupyter extension.
+1. Download the dataset manually from the Kaggle link above.
+2. Upload the CSV file into your local environment or Google Colab notebook.
+3. Update the dataset path in the notebook if needed.
 
-🧠 Workflow
+The dataset includes:
 
-Each member works on a separate branch
+- Restaurant metadata
+- Cuisine categories
+- Geographic information
+- Operational attributes
+- User-generated ratings
 
-Use pull requests before merging
+## Workflow
 
-Keep notebooks clean (clear outputs before commit)
+The project includes:
 
-📊 Goals
+- Exploratory Data Analysis (EDA)
+- Data cleaning and leakage prevention
+- Feature engineering
+- Missing value handling
+- Target encoding for high-cardinality features
+- Model benchmarking
+- Threshold optimization for business-specific precision targets
 
-{Will be added later}
+## Models Evaluated
 
-⚠️ Notes
+Several classification models were benchmarked:
 
-Do not upload large datasets
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+- XGBoost
+- AdaBoost
 
-Do not commit the venv/ folder
 
-Update requirements.txt when adding new libraries
 
-📌 Tools Used
+## Key Takeaway
 
-Python
-
-Pandas
-
-NumPy
-
-Matplotlib / Seaborn
-
-Jupyter Notebook
+This project demonstrates how machine learning can be adapted to business-specific decision strategies, where model success is defined not by generic accuracy, but by alignment with real-world risk constraints.
